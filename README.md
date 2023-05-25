@@ -1,3 +1,5 @@
-# Headline
+# 前言
 
-> An awesome project.
+> Hello，各位好，我是影子灰！
+>
+> 这篇文档集合了所有 HandyJS 的 api，以及编程知识，可以帮助你通过计算机完成很多事情。
