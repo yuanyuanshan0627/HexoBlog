@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>影子灰</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="description" content="Front-end cookbook" />
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-		/>
-		<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/docsify-vuepress-theme/dist/style.min.css"
-		/>
-	</head>
-	<body>
-		<div id="app">Loading...</div>
-		<script>
-			window.$docsify = {
-				name: "深沉影子灰",
-// 				repo: "https://github.com/luvsunlight/js-offer-algo",
-				autoHeader: true,
-				loadSidebar: true,
+  <head>
+    <meta charset="UTF-8" />
+    <title>深沉影子灰</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Front-end cookbook" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/docsify-vuepress-theme/dist/style.min.css"
+    />
+    <!-- 设置浏览器图标 -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <script>
+      window.$docsify = {
+        name: "深沉影子灰",
+        // repo: "https://github.com/luvsunlight/js-offer-algo",
+        autoHeader: true,
+        loadSidebar: true,
+        // 封面
         coverpage: true,
-				maxLevel: 1,
-				subMaxLevel: 1,
-				executeScript: true,
-				mergeNavbar: true,
-				// 配置进度条
+        onlyCover: true,
+        // 标头
+        autoHeader: true,
+        // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+        loadNavbar: true,
+        maxLevel: 1,
+        subMaxLevel: 1,
+        executeScript: true,
+        mergeNavbar: true,
+        // 配置进度条
         progress: true,
         // 自动标头
         autoHeader: true,
-				search: {
-					paths: "auto",
-					placeholder: {
-						"/": "搜索"
-					}
-				},
-				notFoundPage: "/_404.md",
-				plugins: [function(hook) {}]
-			}
-		</script>
-		<script src="//unpkg.com/docsify/lib/docsify.js"></script>
-		<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-		<script src="https://unpkg.com/docsify-vuepress-theme/dist/index.min.js"></script>
-		<script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-		<script src="//unpkg.com/docsify-copy-code"></script>
-		<script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
-	</body>
+        search: {
+          paths: "auto",
+          placeholder: {
+            "/": "搜索",
+          },
+        },
+        notFoundPage: "/_404.md",
+        plugins: [function (hook) {}],
+      };
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://unpkg.com/docsify-vuepress-theme/dist/index.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  </body>
 </html>
