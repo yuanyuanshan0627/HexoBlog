@@ -346,7 +346,7 @@ valine:
 waline:
   serverURL: https://www.handyjs.cn/
   bg:
-  pageview: false
+  pageview: true
   option:
     # pageSize: 10
     # requiredFields: mail
