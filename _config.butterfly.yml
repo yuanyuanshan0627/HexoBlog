@@ -348,14 +348,14 @@ waline:
   bg:
   pageview: true
   option:
-    # pageSize: 10
-    # requiredFields: mail
-    # # anonymous: false
-    # placeholder: 社交登录可助您快速录入信息，可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项
-    # # avatarCDN: https://sdn.geekzu.org/avatar/
-    # #https://valinecdn.bili33.top/
-    # langMode:
-    #   admin: Hajeekn
+    pageSize: 10
+    requiredFields: mail
+    anonymous: true
+    placeholder: 社交登录可助您快速录入信息，可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项
+    # avatarCDN: https://sdn.geekzu.org/avatar/
+    #https://valinecdn.bili33.top/
+    langMode:
+      admin: Hajeekn
 
 # utterances
 # https://utteranc.es/
