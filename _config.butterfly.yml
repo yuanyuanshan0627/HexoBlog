@@ -344,7 +344,7 @@ valine:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL:
+  serverURL: https://www.handyjs.cn/
   bg:
   pageview: false
   option:
