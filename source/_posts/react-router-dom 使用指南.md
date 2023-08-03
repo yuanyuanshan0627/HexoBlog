@@ -9,7 +9,7 @@ swiper_index: 2
 tags:
 - React-router-dom
 title: react-router-dom 使用指南
-updated: 2023-8-3T17:50:57.316+8:0
+updated: 2023-8-3T18:13:44.36+8:0
 ---
 ## 一、基本使用
 
@@ -441,9 +441,9 @@ http.createServer(requestHandler).listen(3000);
 
 ## 十三、使用JS对象定义路由：useRoutes
 
-使用 `useRoutes` hook，可以使用一个JS对象而不是Routes组件与Route组件来定义路由。其功能类似于[react-router-config](https://link.zhihu.com/?target=https%3A//www.npmjs.com/package/react-router-config)
+使用 `useRoutes` hook，可以使用一个JS对象而不是Routes组件与Route组件来定义路由。其功能类似于[react-router-config](https://www.npmjs.com/package/react-router-config)
 
-`useRoutes` 的返回是 React Element，或是 null。
+`useRoutes` 的返回是 React Element，或是 null 。
 
 对于传入的配置对象， 其类型定义如下：
 
