@@ -3,13 +3,14 @@ abbrlink: ''
 categories:
 - - React
 date: '2023-08-03T17:49:45.416119+08:00'
+default_cover: https://img2.baidu.com/it/u=3203430936,1830526363&fm=253&fmt=auto&app=120&f=PNG?w=1422&h=800
 description: react-router-dom 使用指南
 mathjax: true
 swiper_index: 2
 tags:
 - React-router-dom
 title: react-router-dom 使用指南
-updated: 2023-8-3T18:13:44.36+8:0
+updated: 2023-8-3T18:17:36.648+8:0
 ---
 ## 一、基本使用
 
