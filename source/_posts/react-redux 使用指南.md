@@ -3,7 +3,7 @@ abbrlink: react-redux
 categories:
 - - React
 date: '2023-08-04T10:43:46.977768+08:00'
-description: react-redux
+description: 深入浅出🍪react-redux
 mathjax: true
 swiper_index: 1
 tags:
