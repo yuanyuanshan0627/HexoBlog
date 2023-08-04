@@ -1,11 +1,13 @@
 ---
 abbrlink: react-redux
-categories: []
+categories:
+- - React
 date: '2023-08-04T10:43:46.977768+08:00'
 description: react-redux
 mathjax: true
 swiper_index: 1
-tags: []
+tags:
+- react-redux
 title: 🍩react-redux 使用指南
 updated: 2023-8-4T11:5:42.238+8:0
 ---
