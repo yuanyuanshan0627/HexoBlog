@@ -28,7 +28,7 @@ updated: 2023-8-4T11:5:42.238+8:0
 
 ---
 
-**准备工作**
+# **准备工作**
 
 在准备工作进行之前默认你了解了`React`和`ES6`的相关知识。
 
@@ -44,7 +44,7 @@ npx create-react-app react-redux-example
 npm install redux react-redux
 ```
 
-然后我们需要创建一些文件。
+## 然后我们需要创建一些文件。
 
 * 1、在`src`目录下创建一个`container`文件夹，在`container`下面创建一个Articles.js文件。
 
@@ -76,9 +76,10 @@ const Articles = () => {
 export default Articles
 ```
 
-* 2、在`src`目录下面创建一个`components`文件夹，然后创建AddArticle/AddArticle.js和Article/Article.js
+## * 2、在`src`目录下面创建一个`components`文件夹，然后创建AddArticle/AddArticle.js和Article/Article.js
 
-`Article.js`
+
+## `Article.js`文件
 
 ```js
 import React from "react"
@@ -94,7 +95,7 @@ const article = ({ article }) => (
 export default article
 ```
 
-`AddArticle.js`
+## `AddArticle.js`文件
 
 ```js
 import React, { useState } from "react"
@@ -135,7 +136,7 @@ const AddArticle = ({ saveArticle }) => {
 export default AddArticle
 ```
 
-`App.js`
+## `App.js`文件
 
 ```js
 import React from "react"
@@ -151,7 +152,7 @@ export default App
 
 ---
 
-**1.什么是`State`？**
+# **1.什么是`State`？**
 
 每一个`react`组件（无状态组件除外）的核心都是`state`。它决定了组建的渲染方式和表现的形式。想要真正的理解`state`，必须通过实际的例子。比如说弹窗是否打开，组件是否渲染等等。
 
@@ -174,7 +175,7 @@ const [articles, setArticles] = useState([
 
 ---
 
-**2.什么是`redux`为什么使用`redux`？**
+# **2.什么是`redux`为什么使用`redux`？**
 
 如果没有`redux`或者是其他的工具管理`state`将变的无比艰难。想象一下我们必须检查每一个组件来看看弹窗是否开启了。为了解决这个问题，我们必须在组件间传递`props`，这会使组件的数据变得非常的混乱，开发成本也变得很高。但是有了`redux`一切就变得很简单了。
 
@@ -182,13 +183,13 @@ const [articles, setArticles] = useState([
 
 ---
 
-**3.什么是`reducer`？**
+# **3.什么是`reducer`？**
 
 `reducer`是一个纯函数，它接收之前的`state`和`action`作为参数，返回一个更新了的`state`。`reducer`只能处理同步的代码，意味着没有像`HTTP`请求那样的副作用。当然我们也可以用`redux`来处理异步代码，我们在后续会学习怎样处理。当然如果你对`action`还不了解那么没有关系，后面会为大家介绍的。下面让我们来创建我们的第一个`reducer`吧。
 
 按照惯例，我们要创建一个`store`文件夹，然后创建一个`reducer.js`文件。
 
-`reducer.js`文件
+## `reducer.js`文件
 
 ```js
 const initialState = {
@@ -208,7 +209,7 @@ reducer就是一个接收了以前的state和action作为参数的纯函数，�
 
 ---
 
-**4.什么是`store`?**
+# **4.什么是`store`?**
 
 `store`是`react`项目中存储`state`的地方，你可以把它看成是一个大的`JavaScript`对象。创建`store`时我们需要一个`reducer`来作为参数，我们已经创建好`reducer`了，让我们把它关联到`store`上面吧。
 
@@ -228,11 +229,11 @@ ReactDOM.render(<App />, document.getElementById("root"))
 
 ---
 
-**5.怎么把`store`关联到`React`？**
+# **5.怎么把`store`关联到`React`？**
 
 想把`store`关联到`React`，我们需要引入一个辅助函数叫做`Provider`。然后用`Provider`组件包裹着`App`组件，再把`store`作为`props`值传入`Provider`。
 
-`index.js`文件
+## `index.js`文件
 
 ```js
 import React from "react"
@@ -254,7 +255,7 @@ ReactDOM.render(
 )
 ```
 
-`Articles.js`文件
+## `Articles.js`文件
 
 ```js
 import React from "react"
@@ -295,7 +296,7 @@ export default connect(mapStateToProps)(Articles)
 
 ---
 
-**6.什么是`action`？**
+# **6.什么是`action`？**
 
 `action`包含着各种类型，比如`REMOVE\_ARTICLE`*或者* `ADD*\_*ARTICLE`等。它从`react`组件中被分发（传递数据）到`redux`的`store` 中。当让`action`只是一个传递信息的，他不能改变`store`。`store`只能被`reducer`改变。
 
@@ -345,7 +346,7 @@ export default connect(
 
 在这里我们从`actionTypes.js`中引入了`everything` 。然后创建了一个新的函数`mapDispatchToProps` ，它接收`dispatch`作为参数。
 
-`store/reducer.js`文件
+## `store/reducer.js`文件
 
 ```js
 import * as actionTypes from "./actionTypes"
@@ -379,11 +380,11 @@ export default reducer
 
 ---
 
-**7.`redux`怎么处理异步代码？**
+# **7.`redux`怎么处理异步代码？**
 
 我们需要创建一个新的文件 `actionCreators.js`
 
-`store/actionCreators.js`
+## `store/actionCreators.js`文件
 
 ```js
 import * as actionTypes from "./actionTypes"
@@ -396,7 +397,7 @@ export const addArticle = article => {
 }
 ```
 
-`Articles.js`
+## `Articles.js`文件
 
 ```js
 import React from "react"
@@ -439,7 +440,7 @@ export default connect(
 npm install redux-thunk
 ```
 
-`index.js`文件
+## `index.js`文件
 
 ```js
 import React from "react"
@@ -462,7 +463,7 @@ ReactDOM.render(
 )
 ```
 
-`store/actionCreators.js`
+## `store/actionCreators.js`文件
 
 ```js
 import * as actionTypes from "./actionTypes"
@@ -483,7 +484,7 @@ export const simulateHttpRequest = article => {
 }
 ```
 
-`Articles.js`
+## `Articles.js`文件
 
 ```js
 import React from "react"
@@ -524,7 +525,7 @@ export default connect(
 
 ---
 
-**总结**
+# **总结**
 
 当我们在处理中大型的`react`项目是，管理我们的`state`就变得非常的困难。有了`redux`就变得非常简单了，当然了还有很多其他的解决办法像 `context API（hook`）在处理`state`管理的问题时也是非常好用的。
 
@@ -532,6 +533,6 @@ export default connect(
 
 ---
 
-**另附**
+# **另附**
 
 本文参考了`Redux`官网，还有网上一些好文章，如有侵权，请联系我，谢谢。
