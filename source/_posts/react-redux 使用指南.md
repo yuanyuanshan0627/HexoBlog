@@ -9,9 +9,11 @@ swiper_index: 1
 tags:
 - react-redux
 title: 🍩react-redux 使用指南
-updated: 2023-8-4T11:5:42.238+8:0
+updated: 2023-8-7T13:5:43.309+8:0
 ---
 `React`是一款非常优秀的前端框架，但是我们不能说它是尽善尽美的。比如说`React`在做大型项目时，在处理状态管理的问题时就显得捉襟见肘。因此针对于状态管理的问题就衍生出了很多的技术，比如`flux`，`redux`等等。在这篇文章中我们只探讨`redux`，如果小伙伴们学会了`redux`，就不用再去学习`redux`，因为`redux`是`flux`的一个升级。当然有的小伙伴会问如果他用的是vue或者是`angular`可不可以用`redux`呢，这里明确的说明一下都是可以的，哪怕是原生的`js`也是可以的。
+
+![https://hexo-admin.oss-cn-beijing.aliyuncs.com/](https://hexo-admin.oss-cn-beijing.aliyuncs.com/)
 
 在这篇文章中我将会分为七个步骤来为小伙伴们介绍`React Redux`，相信看完这篇文章的你就可以很好的应用`React Redux`了。
 
@@ -77,7 +79,6 @@ export default Articles
 ```
 
 ## * 2、在`src`目录下面创建一个`components`文件夹，然后创建AddArticle/AddArticle.js和Article/Article.js
-
 
 ## `Article.js`文件
 
