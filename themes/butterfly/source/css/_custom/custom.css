@@ -1271,7 +1271,7 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp)
+  background: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/1e9ba4b3b54bac32b2961ad6f54e891a.jpg)
     no-repeat center center;
   background-size: cover;
 }
