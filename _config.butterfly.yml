@@ -543,13 +543,12 @@ tag_ui: # 留空或 index
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # "#e4f4f6" "#efefef"
 background: 
-  #【必选】默认背景
-  default: --default-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg)
-  #【可选】PC端夜间模式背景
-  darkmode: var(--default-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg))
-  #【可选】移动端日间默认背景
+  default: var(--default-bg)
+  #【可选】PC端夜间模式背景 
+  darkmode: var(--darkmode-bg)
+  #【可选】移动端日间默认背景 
   mobileday: var(--mobileday-bg)
-  #【可选】移动端夜间模式背景
+  #【可选】移动端夜间模式背景 
   mobilenight: var(--mobilenight-bg)
 
 # Footer Background
