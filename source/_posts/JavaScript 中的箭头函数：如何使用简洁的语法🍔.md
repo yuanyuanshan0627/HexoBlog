@@ -1,17 +1,18 @@
 ---
-abbrlink: ''
+abbrlink: 784f1a7a
 categories:
-- - 原生 js
-cover: https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/e45ade4938a2819e8ea372f6a3f70334.webp
+  - - 原生 js
+cover: >-
+  https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/e45ade4938a2819e8ea372f6a3f70334.webp
 date: '2023-08-15T17:48:19.725362+08:00'
-description: JavaScript 中的箭头函数：如何使用简洁的语法🍔
-excerpt: theme: channing-cyan 了解有关 JavaScript 箭头函数的所有信息。我们将向您展示如何使用 ES6 箭头语法，以及在代码中利用箭头函数时需要注意的一些常见错误。您将看到许多示例来说明它们的工作原理。 JavaScript 箭头函数随着 ECMAScript 2015（也称为 ES6）的发布而出现。由于其简洁的语法和对*this*关键字的处理，箭头函数很快成为开发人员最喜欢...
+description: "JavaScript\_中的箭头函数：如何使用简洁的语法\U0001F354"
+excerpt: "theme:\_channing-cyan\_了解有关\_JavaScript\_箭头函数的所有信息。我们将向您展示如何使用\_ES6\_箭头语法，以及在代码中利用箭头函数时需要注意的一些常见错误。您将看到许多示例来说明它们的工作原理。\_JavaScript\_箭头函数随着\_ECMAScript\_2015（也称为\_ES6）的发布而出现。由于其简洁的语法和对*this*关键字的处理，箭头函数很快成为开发人员最喜欢..."
 mathjax: true
 swiper_index: 2
 tags:
-- 箭头函数
-title: JavaScript 中的箭头函数：如何使用简洁的语法🍔
-updated: 2023-8-15T17:52:26.577+8:0
+  - 箭头函数
+title: "JavaScript 中的箭头函数：如何使用简洁的语法\U0001F354"
+updated: '2023-8-15T17:52:26.577+8:0'
 ---
 ---
 theme: channing-cyan
