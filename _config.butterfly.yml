@@ -542,7 +542,7 @@ tag_ui: # 留空或 index
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # "#e4f4f6" "#efefef"
-background: 
+background: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg)
   default: var(--default-bg)
   #【可选】PC端夜间模式背景 
   darkmode: var(--darkmode-bg)
