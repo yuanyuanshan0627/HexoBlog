@@ -3168,7 +3168,11 @@ let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
 // unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
 let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
 
-
+ document.getElementById("defineBg").innerText = `:root{
+    --default-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
+    --darkmode-bg:url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
+    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
+    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
 // 更换背景(自己的代码)
 if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
