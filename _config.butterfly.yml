@@ -914,7 +914,9 @@ inject:
     - <style id="blurNum"></style> # 模糊半径调节
     - <style id="settingStyle"></style> # 模糊效果开关
     - <span id="fps"></span> # 帧率检测
-    - <style id="defineBg"></style> # 自定义背景选项
+    - <style id="defineBg">
+    https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg
+    </style> # 自定义背景选项
     - <style id="menu_shadow"></style> # 菜单发光样式
 
   bottom:
