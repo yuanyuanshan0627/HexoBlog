@@ -23,7 +23,7 @@ menu:
   网站 || icon-wangye || faa-tada || hide:
     网站统计: /site/census/ || icon--tongjibiao || faa-tada
     文章统计: /site/echarts/ || icon-shujutongji1 || faa-tada
-    友链🔗: /links/index/ || icon-love-sign || faa-tada
+    友链🔗: /links/ || icon-love-sign || faa-tada
     # 旧时光: /site/time/ || icon-xianxingshalou || faa-tada
   个人 || icon-maoliang || faa-tada || hide:
     唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
