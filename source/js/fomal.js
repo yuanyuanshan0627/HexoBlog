@@ -3175,8 +3175,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
     --darkmode-bg:url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
-    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
-    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
+    --mobileday-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
+    --mobilenight-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
   }`;
 }
 // 切换背景主函数
