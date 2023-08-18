@@ -5,12 +5,12 @@ categories:
 cover: https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/a2897f25c7cb438f70b0261903bc2df3.webp
 date: '2023-08-18T11:14:54.575671+08:00'
 description: Clean React 项目的 21 个最佳实践🍭
-mathjax: 2
+mathjax: true
 swiper_index: 2
 tags:
 - react 最佳实践
 title: Clean React 项目的 21 个最佳实践🍭
-updated: 2023-8-18T11:14:55.264+8:0
+updated: 2023-8-18T13:27:58.460+8:0
 ---
 # Clean React 项目的 21 个最佳实践
 
@@ -27,13 +27,15 @@ React 对于如何构建事物非常没有主见。这正是我们有责任保�
 ### 坏的
 
 return (
-  <Navbar showTitle={true} />
+<Navbar showTitle={true} />
 );
+
 ### 好的
 
 return(
-  <Navbar showTitle />  
+<Navbar showTitle />
 )
+
 ## 2.使用三元运算符
 
 假设你想根据角色显示用户的详细信息。
@@ -43,15 +45,17 @@ return(
 const { role } = user;
 
 if(role === ADMIN) {
-  return <AdminUser />
+return <AdminUser />
 }else{
-  return <NormalUser />
+return <NormalUser />
 }
+
 ### 好的
 
 const { role } = user;
 
 return role === ADMIN ? <AdminUser /> : <NormalUser />
+
 ## 3.利用对象文字
 
 对象字面量可以帮助我们的代码更具可读性。假设您想根据角色显示三种类型的用户。您不能使用三元，因为选项数量超过两个。
@@ -61,21 +65,22 @@ return role === ADMIN ? <AdminUser /> : <NormalUser />
 const {role} = user
 
 switch(role){
-  case ADMIN:
-    return <AdminUser />
-  case EMPLOYEE:
-    return <EmployeeUser />
-  case USER:
-    return <NormalUser />
+case ADMIN:
+return <AdminUser />
+case EMPLOYEE:
+return <EmployeeUser />
+case USER:
+return <NormalUser />
 }
+
 ### 好的
 
 const {role} = user
 
 const components = {
-  ADMIN: AdminUser,
-  EMPLOYEE: EmployeeUser,
-  USER: NormalUser
+ADMIN: AdminUser,
+EMPLOYEE: EmployeeUser,
+USER: NormalUser
 };
 
 const Component = components[role];
@@ -90,7 +95,8 @@ return <Componenent />;
 ### 坏的
 
 return (
-  <div>
+
+<div>
      <Component1 />
      <Component2 />
      <Component3 />
@@ -99,12 +105,13 @@ return (
 ### 好的
 
 return (
-  <>
-     <Component1 />
-     <Component2 />
-     <Component3 />
-  </>  
+<>
+<Component1 />
+<Component2 />
+<Component3 />
+</>
 )
+
 ## 5. 不要在渲染中定义函数
 
 不要在渲染中定义函数。尝试将渲染内部的逻辑保持在绝对最低限度。
@@ -112,19 +119,21 @@ return (
 ### 坏的
 
 return (
-    <button onClick={() => dispatch(ACTION_TO_SEND_DATA)}>    // NOTICE HERE
-      This is a bad example 
-    </button>  
+<button onClick={() => dispatch(ACTION_TO_SEND_DATA)}>    // NOTICE HERE
+This is a bad example
+</button>
 )
+
 ### 好的
 
 const submitData = () => dispatch(ACTION_TO_SEND_DATA)
 
 return (
-  <button onClick={submitData}>  
-    This is a good example 
-  </button>  
+<button onClick={submitData}>
+This is a good example
+</button>
 )
+
 ## 6. 使用备忘录
 
 `React.PureComponent`并且`Memo`可以显着提高应用程序的性能。它们帮助我们避免不必要的渲染。
@@ -134,22 +143,22 @@ return (
 import React, { useState } from "react";
 
 export const TestMemo = () => {
-  const [userName, setUserName] = useState("faisal");
-  const [count, setCount] = useState(0);
-  
-  const increment = () => setCount((count) => count + 1);
-  
-  return (
-    <>
-      <ChildrenComponent userName={userName} />
-      <button onClick={increment}> Increment </button>
-    </>
-  );
+const [userName, setUserName] = useState("faisal");
+const [count, setCount] = useState(0);
+
+const increment = () => setCount((count) => count + 1);
+
+return (
+<>
+<ChildrenComponent userName={userName} />
+<button onClick={increment}> Increment </button>
+</>
+);
 };
 
 const ChildrenComponent =({ userName }) => {
-  console.log("rendered", userName);
-  return <div> {userName} </div>;
+console.log("rendered", userName);
+return <div> {userName} </div>;
 };
 尽管子组件应该只渲染一次，因为 count 的值与`ChildComponent`. 但是，每次单击按钮时它都会呈现。
 
@@ -162,8 +171,8 @@ const ChildrenComponent =({ userName }) => {
 import React ,{useState} from "react";
 
 const ChildrenComponent = React.memo(({userName}) => {
-    console.log('rendered')
-    return <div> {userName}</div>
+console.log('rendered')
+return <div> {userName}</div>
 })
 现在，无论您单击该按钮多少次，它只会在必要时呈现。
 
@@ -176,18 +185,19 @@ const ChildrenComponent = React.memo(({userName}) => {
 // CSS FILE
 
 .body {
-  height: 10px;
+height: 10px;
 }
 
 //JSX
 
 return <div className='body'>
-   
+
 </div>
 ### 好的
 
-const bodyStyle = {
-  height: "10px"
+
+### 好的const bodyStyle = {
+height: "10px"
 }
 
 return <div style={bodyStyle}>
@@ -195,28 +205,31 @@ return <div style={bodyStyle}>
 </div>
 ## 8.使用对象解构
 
-使用对象解构对你有利。假设您需要显示用户的详细信息。
+
+## 8.使用对象解构使用对象解构对你有利。假设您需要显示用户的详细信息。
 
 ### 坏的
 
 return (
-  <>
-    <div> {user.name} </div>
-    <div> {user.age} </div>
-    <div> {user.profession} </div>
-  </>  
+<>
+<div> {user.name} </div>
+<div> {user.age} </div>
+<div> {user.profession} </div>
+</>
 )
+
 ### 好的
 
 const { name, age, profession } = user;
 
 return (
-  <>
-    <div> {name} </div>
-    <div> {age} </div>
-    <div> {profession} </div>
-  </>  
+<>
+<div> {name} </div>
+<div> {age} </div>
+<div> {profession} </div>
+</>
 )
+
 ## 9. 字符串道具不需要大括号
 
 将字符串道具传递给子组件时。
@@ -224,13 +237,15 @@ return (
 ### 坏的
 
 return(
-  <Navbar title={"My Special App"} />
+<Navbar title={"My Special App"} />
 )
+
 ### 好的
 
 return(
-  <Navbar title="My Special App" />  
+<Navbar title="My Special App" />
 )
+
 ## 10. 从 JSX 中删除 JS 代码
 
 如果任何 JS 代码不能用于渲染或 UI 功能，请将其移出 JSX。
@@ -238,7 +253,8 @@ return(
 ### 坏的
 
 return (
-  <ul>
+
+<ul>
     {posts.map((post) => (
       <li onClick={event => {
         console.log(event.target, 'clicked!'); // <- THIS IS BAD
@@ -250,11 +266,12 @@ return (
 ### 好的
 
 const onClickHandler = (event) => {
-   console.log(event.target, 'clicked!'); 
+console.log(event.target, 'clicked!');
 }
 
 return (
-  <ul>
+
+<ul>
     {posts.map((post) => (
       <li onClick={onClickHandler} key={post.id}> {post.title} </li>
     ))}
@@ -269,14 +286,16 @@ return (
 const userDetails = user.name + "'s profession is" + user.proffession
 
 return (
-  <div> {userDetails} </div>  
+
+<div> {userDetails} </div>  
 )
 ### **好的**
 
 const userDetails = `${user.name}'s profession is ${user.proffession}`
 
 return (
-  <div> {userDetails} </div>  
+
+<div> {userDetails} </div>  
 )
 ## 12. 按订单进口
 
@@ -289,6 +308,7 @@ import ErrorImg from '../../assets/images/error.png';
 import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 import { PropTypes } from 'prop-types';
+
 ### 好的
 
 经验法则是保持导入顺序如下：
@@ -306,6 +326,7 @@ import styled from 'styled-components/native';
 
 import ErrorImg from '../../assets/images/error.png';
 import colors from '../../styles/colors';
+
 ## 13.使用隐式返回
 
 使用 JavaScript 隐含的功能`return`来编写漂亮的代码。假设您的函数执行简单的计算并返回结果。
@@ -313,11 +334,13 @@ import colors from '../../styles/colors';
 ### 坏的
 
 const add = (a, b) => {
-  return a + b;
+return a + b;
 }
+
 ### 好的
 
 const add = (a, b) => a + b;
+
 ## 14. 组件命名
 
 始终对组件使用 PascalCase，对实例使用 CamelCase。
@@ -327,11 +350,13 @@ const add = (a, b) => a + b;
 import reservationCard from './ReservationCard';
 
 const ReservationItem = <ReservationCard />;
+
 ### 好的
 
 import ReservationCard from './ReservationCard';
 
 const reservationItem = <ReservationCard />;
+
 ## 15. 保留的道具命名
 
 不要使用 DOM 组件 prop 名称在组件之间传递 prop，因为其他人可能不期望这些名称。
@@ -356,6 +381,7 @@ const reservationItem = <ReservationCard />;
 
 <Foo style={{ left: "20px" }} />
 ```
+
 ### 好的
 
 <Foo bar="bar" />
@@ -368,16 +394,18 @@ const reservationItem = <ReservationCard />;
 ### 坏的
 
 <Component
-  UserName="hello"
-  phone_number={12345678}
+UserName="hello"
+phone_number={12345678}
 />
+
 ### 好的
 
 <MyComponent
-  userName="hello"
-  phoneNumber={12345678}
-  Component={SomeComponent}
+userName="hello"
+phoneNumber={12345678}
+Component={SomeComponent}
 />
+
 ## 18. 括号中的 JSX
 
 如果您的组件跨越一行以上，请始终将其括在括号中。
@@ -385,8 +413,9 @@ const reservationItem = <ReservationCard />;
 ### 坏的
 
 return <MyComponent variant="long">
-           <MyChild />
-         </MyComponent>;
+<MyChild />
+</MyComponent>;
+
 ### 好的
 
 ```
@@ -397,6 +426,7 @@ return (
     </MyComponent>
 );
 ```
+
 ## 19. 自闭合标签
 
 如果您的组件没有任何子组件，请使用自闭合标签。它提高了可读性。
@@ -404,6 +434,7 @@ return (
 ### 坏的
 
 <SomeComponent variant="stuff"></SomeComponent>
+
 ### 好的
 
 <SomeComponent variant="stuff" />
@@ -414,8 +445,9 @@ return (
 ### 坏的
 
 const _onClickHandler = () => {
-  // do stuff
+// do stuff
 }
+
 ### 好的
 
 ```
@@ -424,6 +456,7 @@ const onClickHandler = () => {
   // do stuff
 }
 ```
+
 ## 21. 替代道具
 
 始终在标签中包含 alt 属性`<img >`。并且不要在替代项中使用`picture`或 ，因为屏幕阅读器已经将元素宣布为图像。无需包括该内容。`image``property``img`
