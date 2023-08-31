@@ -1119,7 +1119,7 @@ function createtime1() {
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到影子灰🥝の小家!`,
+    `欢迎来到Fomalhaut🥝の小家!`,
     `Future is now 🍭🍭🍭`,
     `
         
@@ -3168,15 +3168,16 @@ let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
 // unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
 let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
 
+
 // 更换背景(自己的代码)
 if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
-    --darkmode-bg:url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
-    --mobileday-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
-    --mobilenight-bg: url(https://hexo-admin.oss-cn-beijing.aliyuncs.com/image/2023/8/09e0c98bffd0d6607e0d8bcc59e6fc84.jpg);
+    --default-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/dm14.webp);
+    --darkmode-bg:url(https://lskypro.acozycotage.net/Fomalhaut/img/yuanshen1.webp);
+    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
+    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
   }`;
 }
 // 切换背景主函数
